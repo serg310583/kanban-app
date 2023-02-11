@@ -1,0 +1,35 @@
+.main {
+  width: 100%;
+  max-width: 1235px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 auto;
+  background-color: #0079bf;
+  padding: 20px 20px 32px 20px;
+  height: calc(100% - 110px);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.main > div:last-of-type {
+  margin-right: 0;
+}
+@media (max-width: 1180px) {
+  .main {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+@media (max-width: 450px) {
+  .main {
+    height: calc(100% - 55px);
+    /* padding-top: 100px; */
+    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}

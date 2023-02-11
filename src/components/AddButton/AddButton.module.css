@@ -1,0 +1,32 @@
+.column_add_button {
+  padding: 4px 6px;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #5e6c84;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+.column_add_button[disabled] {
+  cursor: not-allowed;
+}
+.column_add_button[disabled]:hover {
+  background-color: unset;
+}
+.column_add_button:hover {
+  background-color: #fff;
+}
+.column_add_button::before {
+  content: "";
+  position: relative;
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  margin-right: 4px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 6H8V1C8 0.448 7.552 0 7 0C6.448 0 6 0.448 6 1V6H1C0.448 6 0 6.448 0 7C0 7.552 0.448 8 1 8H6V13C6 13.552 6.448 14 7 14C7.552 14 8 13.552 8 13V8H13C13.552 8 14 7.552 14 7C14 6.448 13.552 6 13 6Z' fill='%235E6C84'/%3e%3c/svg%3e");
+}

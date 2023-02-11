@@ -1,0 +1,101 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ebecf0;
+  max-height: 100%;
+  min-width: 282px;
+  border-radius: 10px;
+  padding: 15px 12px;
+  margin-right: 15px;
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  overflow: auto;
+}
+.column_title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.task_list {
+  list-style-type: none;
+}
+.task_list_element {
+  word-wrap: break-word;
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff;
+  padding: 7px 9px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.column_add_button {
+  padding: 4px 6px;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #5e6c84;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.column_add_button:hover {
+  background-color: #fff;
+}
+.column_add_button::before {
+  content: "";
+  position: relative;
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin-top: 2px;
+  margin-right: 4px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13 6H8V1C8 0.448 7.552 0 7 0C6.448 0 6 0.448 6 1V6H1C0.448 6 0 6.448 0 7C0 7.552 0.448 8 1 8H6V13C6 13.552 6.448 14 7 14C7.552 14 8 13.552 8 13V8H13C13.552 8 14 7.552 14 7C14 6.448 13.552 6 13 6Z' fill='%235E6C84'/%3e%3c/svg%3e");
+}
+.link {
+  width: 100%;
+  color: inherit;
+  text-decoration: inherit;
+}
+.empty_column {
+  margin-bottom: 17px;
+}
+.option_form {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+}
+.select {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 8px 7px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  overflow: auto;
+  margin-bottom: 15px;
+}
+option {
+  max-width: 100%;
+  overflow: auto;
+}
+@media (max-width: 450px) {
+  .column {
+    margin-bottom: 15px;
+    overflow: unset;
+    margin-right: 0;
+    width: 90%;
+  }
+}
