@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import style from './FormAddTask.module.css';
+import css from './FormAddTask.module.css';
 
 const FormAddTask = ({ formSubmit, setAddCard }) => {
   const [values, setValues] = useState({
@@ -17,16 +17,16 @@ const FormAddTask = ({ formSubmit, setAddCard }) => {
     }
   };
   return (
-    <form onSubmit={handleSubmit} className={style.column_form}>
+    <form onSubmit={handleSubmit} className={css.column_form}>
       <input
         type="text"
         id="taskTitle"
         name="title"
-        className={style.column_textarea}
+        className={css.column_textarea}
         onChange={handleChange}
         value={values.title}
       />
-      <button className={style.column_add_button} type="submit">
+      <button className={css.column_add_button} type="submit">
         Submit
       </button>
     </form>

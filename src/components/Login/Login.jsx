@@ -1,4 +1,4 @@
-import style from './Login.module.css'
+import css from './Login.module.css';
 import UserAvatar from '../../images/user-menu.png';
 import { useEffect, useState } from 'react';
 
@@ -15,10 +15,10 @@ function useDelayUnmount(isMounted, delayTime) {
   }, [isMounted, delayTime, showDiv]);
   return showDiv;
 }
-const mountedStyle = { animation: "inAnimation 250ms ease-in" };
+const mountedStyle = { animation: 'inAnimation 250ms ease-in' };
 const unmountedStyle = {
-  animation: "outAnimation 270ms ease-out",
-  animationFillMode: "forwards"
+  animation: 'outAnimation 270ms ease-out',
+  animationFillMode: 'forwards',
 };
 
 export default function Login() {
@@ -26,26 +26,18 @@ export default function Login() {
   const showDiv = useDelayUnmount(isMounted, 250);
 
   return (
-    <div className={style.login_wrapper} onClick={() => setIsMounted(!isMounted)}>
-      <img src={UserAvatar} alt="user avatar" className={style.user_avatar} />
-      <div className={isMounted ? style.icon + ' ' + style.isopen : style.icon} />
-      {showDiv &&
+    <div className={css.login_wrapper} onClick={() => setIsMounted(!isMounted)}>
+      <img src={UserAvatar} alt="user avatar" className={css.user_avatar} />
+      <div className={isMounted ? css.icon + ' ' + css.isopen : css.icon} />
+      {showDiv && (
         <div
-          className={style.login_dropdown}
+          className={css.login_dropdown}
           style={isMounted ? mountedStyle : unmountedStyle}
         >
-          <button className={style.login_dropdown_button}>Profile</button>
-          <button className={style.login_dropdown_button}>Log Out</button>
+          <button className={css.login_dropdown_button}>Profile</button>
+          <button className={css.login_dropdown_button}>Log Out</button>
         </div>
-
-      }
+      )}
     </div>
   );
 }
-
-
-
-
-
-
-
